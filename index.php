@@ -8,21 +8,65 @@
         
         <title>Salary Web App</title>
         
+        <style type="text/css">
+            
+            h3
+            {
+                font-weight: bold;
+                color: royalblue;
+            }
+            
+            #calc          
+            {
+                margin-top: 50px;
+                margin-left: 100px;
+            }
+            
+        </style>
+        
     </head>
     
-    <body>
+    <body> 
         
+        <div id="calc">
+                
         <form action="index.php" method="GET">
             
-            Employee Name : <input type="text" name="employeeNameText"><br/>
+            <h3>Employee Salary Calculator</h3>
             
-            Basic Amount : <input type="text" name="basicSalaryText"><br/>
+            <table>
+                
+                <tr>
+                    <td>Employee Name :</td>
+                    
+                    <td><input type="text" name="employeeNameText"></td>
+                </tr>
+                
+                <tr>
+                    <td>Basic Amount :</td>
+                    
+                    <td><input type="text" name="basicSalaryText"></td>
+                </tr>
+                
+                <tr>
+                    <td>House Rent :</td>
+                    
+                    <td><input type="text" name="houseRentText">% of Basic</td>
+                </tr>
+                
+                <tr>
+                    <td>Medical Allowance :</td>
+                    
+                    <td><input type="text" name="medicalAllowenceText"> % of Basic</td>
+                </tr>
+                
+                <tr>                    
+                    
+                    <td><input type="submit" value="Show Me Salary "  name="showSalaryButton"></td>
+                
+                </tr>
             
-            House Rent : <input type="text" name="houseRentText">% of Basic<br/>
-            
-            Medical Allowance: <input type="text" name="medicalAllowenceText"> % of Basic<br/>
-            
-            <input type="submit" value="Show Me Salary "  name="showSalaryButton">
+            </table>
             
         </form>
   
@@ -45,11 +89,11 @@
             
             echo  $employeeSalaryCalculator ->employee_name.', your total salary is : '.$employeeSalaryCalculator ->get_total_salary().' taka' ;
             
-        }       
-       
-                
+        }                             
        
         ?>
+            
+   </div>
         
     </body>
     
